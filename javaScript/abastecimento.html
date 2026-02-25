@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Abastecimento</title>
+</head>
+<body>
+    <h1>Sistema de Abastecimento</h1>
+    <p>Este é o sistema de abastecimento do veículo.</p>
+    <label>Quilometragem Inicial:</label><br><br>
+    <input type="number" id="kmInicial"><br><br>
+    <label>Quilometragem Final:</label><br><br>
+    <input type="number" id="kmFinal"><br><br>
+
+    <label>Quantidade de Combustível Abastecido (em litros):</label><br><br>
+    <input type="number" id="litrosAbastecidos"><br><br>
+
+    <label>Preço por litro:</label><br><br>
+    <input type="number" id="precoLitro"><br><br>
+
+    <button onclick="calcularAbastecimento()">Calcular</button>
+    <h3 id="resultado">Resultado</h3>
+    <script>
+        function calcularAbastecimento() {
+           let kmInicial = Number(document.getElementById('kmInicial').value);
+           let kmFinal   = Number(document.getElementById('kmFinal').value);
+           let litros    = Number(document.getElementById('litrosAbastecidos').value);
+           let preco     = Number(document.getElementById('precoLitro').value);
+            
+           if (kmFinal <= kmInicial) {
+             document.getElementById('resultado').innerHTML =
+             "Erro: A quilometragem final deve ser maior que a inicial."
+             return;
+           }
+            if(litros <= 0 || preco<= 0){
+                document.getElementById("resultado").innerHTML = "Erro: Litros e preço devem ser maiores que 0(zero)"
+                return;
+            }
+            let kmPercorridos = kmFinal - kmInicial;
+            let consumoMedio = kmPercorridos / litros;
+            let custoTotal = litros * preco;
+            let custoPorKm = custoTotal / kmPercorridos;
+
+            document.getElementById('resultado').innerHTML =
+            "Km rodados: " + kmPercorridos.toFixed(2) + "<br>" +
+            "Consumo médio: " + consumoMedio.toFixed(2) + " km/l<br>" +
+            "Custo total: R$ " + custoTotal.toFixed(2) + "<br>" +
+            "Custo por km: R$ " + custoPorKm.toFixed(2);
+            
+        }
+    </script>
+
+
+</body>
+</html>
