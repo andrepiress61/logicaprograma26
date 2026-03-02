@@ -1,78 +1,70 @@
-body {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+body{
+    margin-top: 30px;
+    background-color: black;
+    color: #7e8c54;
 }
-/* 
-footer {
-  background-color: darkgoldenrod;
-  color: rgb(255, 23, 236);
-  padding: 20px 0;
-  text-align: center;
-  width: 100%;
-} */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8c979a;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
 .table.table-striped {
-  width: 100%;
-  color: black;
-  border-collapse: collapse;
-  margin-top: 20px;
-  background-color: rgb(255, 255, 255);
+    width: 100%;
+    color: black;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
 }
-
-footer {
-  background-color: rgb(40, 5, 5);
-  color: rgb(250, 242, 242);
-  padding: 20px 0;
-  text-align: center;
-  width: 100%;
-}
-
-footer {
-  background-color: rgb(49, 214, 255);
-  color: rgb(27, 218, 148);
-  padding: 20px 0;
-  text-align: center;
-  width: 100%;
-}
-
 .footer-conteudo {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  background-color: rgb(12, 12, 60);
-  color: rgb(12, 166, 107);
-  padding: 20px 0;
-  text-align: center;
-  width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    background-color: #8c979a;
+    color: #7e8c54;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
 }
-
 .footer-box {
-  flex: 1;
-  padding: 20px;
-  border-left: 2px solid green;
+    flex: 1;
+    padding: 20px;
+    border-left: 2px solid #ccc;
+    
+    
 }
-
-footer.img {
-  width: 300px;
-  height: auto;
-  margin-bottom: 10px;
+footer img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 footer p {
-  margin: 5px 0;
-  font-size: 18px;
+    margin: 5px 0;
+    font-size: 18px;
 }
+
 footer a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
+
 footer a:hover {
-  color: rgb(225, 0, 0);
-  text-decoration: none;
+    text-decoration: none;
+    color: rgb(127, 232, 36);
 }
 
 footer h3 {
-  margin-bottom: 10px;
-  font-size: 30px;
-  color: green;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: rgb(127, 232, 36);
 }
 
+.modal-content {
+    background-color: #8c979a;
+    color: white;
+}
